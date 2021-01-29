@@ -16,7 +16,7 @@ apply plugin : 'eclipse'
 apply plugin : 'org.springframework.boot'
 apply plugin : 'io.spring.dependency-management'
 
-group 'com.btootaws.example'
+group 'com.bootaws.example'
 version '1.0-SNAPSHOT'
 sourceCompatibility = 1.8
 
@@ -28,6 +28,11 @@ repositories {
 dependencies {
     compile('org.springframework.boot:spring-boot-starter-web')
     testCompile('org.springframework.boot:spring-boot-starter-test')
+    //롬복
+    compile('org.projectlombok:lombok')
+    testCompile "org.projectlombok:lombok"
+    annotationProcessor('org.projectlombok:lombok')
+    testAnnotationProcessor('org.projectlombok:lombok')
 }
 
 test {
